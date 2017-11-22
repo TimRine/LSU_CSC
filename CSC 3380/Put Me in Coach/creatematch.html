@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Create Match</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <!-- Temporary navbar container fix -->
+    <style>
+        .navbar-toggler {
+            z-index: 1;
+        }
+
+        @media (max-width: 576px) {
+            nav > .container {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <div class="collapse navbar-collapse" id="navbarExample">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="findmatch.html">Find Match</a></li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="creatematch.html">Create Match</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="newsfeed.html">News Feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Create a Match</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Create a Match</li>
+    </ol>
+
+    <!-- Image Header -->
+    <img class="img-fluid rounded mb-4" src="http://www.gujaratsports.in/data1/images/b5.jpg" alt="">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
+                <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Event Name</legend>
+                <form action="#" method="post" class="form" role="form">
+                    <input class="form-control" name="eventName" placeholder="Name" type="text" />
+                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Description"></textarea>
+                    <label for="">
+                        Date of the Event</label>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4">
+                            <select class="form-control">
+                                <option value="Day">1</option>
+                                <option value="Day">2</option>
+                                <option value="Day">3</option>
+                                <option value="Day">4</option>
+                                <option value="Day">5</option>
+                                <option value="Day">6</option>
+                                <option value="Day">7</option>
+                                <option value="Day">8</option>
+                                <option value="Day">9</option>
+                                <option value="Day">10</option>
+                                <option value="Day">11</option>
+                                <option value="Day">12</option>
+                                <option value="Day">13</option>
+                                <option value="Day">14</option>
+                                <option value="Day">15</option>
+                                <option value="Day">16</option>
+                                <option value="Day">17</option>
+                                <option value="Day">18</option>
+                                <option value="Day">19</option>
+                                <option value="Day">20</option>
+                                <option value="Day">21</option>
+                                <option value="Day">22</option>
+                                <option value="Day">23</option>
+                                <option value="Day">24</option>
+                                <option value="Day">25</option>
+                                <option value="Day">26</option>
+                                <option value="Day">27</option>
+                                <option value="Day">28</option>
+                                <option value="Day">29</option>
+                                <option value="Day">30</option>
+                                <option value="Day">31</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <select class="form-control">
+                                <option value="Month">January</option>
+                                <option value="Month">February</option>
+                                <option value="Month">March</option>
+                                <option value="Month">April</option>
+                                <option value="Month">May</option>
+                                <option value="Month">June</option>
+                                <option value="Month">July</option>
+                                <option value="Month">August</option>
+                                <option value="Month">September</option>
+                                <option value="Month">October</option>
+                                <option value="Month">November</option>
+                                <option value="Month">December</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <select class="form-control">
+                                <option value="Year">2017</option>
+                                <option value="Year">2018</option>
+                                <option value="Year">2019</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label>Sport</label>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <select class="form-control">
+                                <option value="Sport">Badminton</option>
+                                <option value="Sport">Baseball</option>
+                                <option value="Sport">Basketball</option>
+                                <option value="Sport">Bowling</option>
+                                <option value="Sport">Boxing</option>
+                                <option value="Sport">Crossfit</option>
+                                <option value="Sport">Cycling</option>
+                                <option value="Sport">Football</option>
+                                <option value="Sport">Golf</option>
+                                <option value="Sport">Gym Exercise</option>
+                                <option value="Sport">Gymnastics</option>
+                                <option value="Sport">Racquetball</option>
+                                <option value="Sport">Rowing</option>
+                                <option value="Sport">Rugby</option>
+                                <option value="Sport">Running</option>
+                                <option value="Sport">Soccer</option>
+                                <option value="Sport">Softball</option>
+                                <option value="Sport">Swimming</option>
+                                <option value="Sport">Table Tennis</option>
+                                <option value="Sport">Tennis</option>
+                                <option value="Sport">Badminton</option>
+                                <option value="Sport">Track & Field</option>
+                                <option value="Sport">Ultimate Frisbee</option>
+                                <option value="Sport">Volleyball</option>
+                                <option value="Sport">Weightlifting</option>
+                                <option value="Sport">Yoga</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit"><a href="matchcreated.html">Create Match</a></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <p></p><p>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-inverse">
+        <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Put Me in Coach 2017</p>
+</div>
+<!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/tether/tether.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
