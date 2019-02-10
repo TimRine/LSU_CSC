@@ -1,0 +1,71 @@
+Homework 2 Solutions
+
+1. (a)	stack	input	action
+	----------------------
+		bbbb$	shift
+	b	bbb$	shift / reduce A->
+
+	G1 is not LR(1) since there is a conflict.
+	G1 is not LR(0) since it is not LR(1).
+
+   (b)	stack	input	action
+	----------------------
+		bbbb$	reduce A->
+	A	bbbb$	shift
+	Ab	bbb$	shift
+	Abb	bb$	reduce A->Abb
+	A	bb$	shift
+	Ab	b$	shift
+	Abb	$	reduce A->Abb
+	A	$	accept
+
+	G2 is LR(1) since the parse worked.
+	G2 is LR(0) since we didn't need the lookahead for making
+	parsing decisions (we know when to reduce by looking only
+	at the stack).
+
+	Really, the arguments that G2 is LR(1)/LR(0) are kind of weak.
+	The real way to show that would be to construct the parse tables.
+	But since the language is that simple, and since we don't have
+	too many options for parsing it, it works to argue from this example
+	parse trace that it should work for any input.
+
+	BTW, in some books (e.g., the previous edition of the the 4101
+	textbook) and some material on the internet claim that a grammar
+	with epsilon cannot be LR(0).  G2 is a counter-example.  An
+	epsilon production must be the bottom-left leaf in a subtree of
+	the concrete parse tree for an LR(0) parser to handle it.
+
+   (c)	G1 is not LL(1) since b predicts both A-> and A->bAb.
+	G2 is not LL(1) since it is left recursive.
+
+   (d)	L(G1) is a regular language.  It can be described with the
+	regular expression (bb)*.
+
+
+2. (a)	Left-factoring and eliminating left recursion yields
+
+	 1. E  -> T E'
+	 2. E' -> + T E'
+	 3. E' ->
+	 4. T  -> id T'
+	 5. T' ->
+	 6. T' -> ( T"
+	 7. T" -> )
+	 8. T" -> L )
+	 9. L  -> E L'
+	10. L' -> ; L
+	11. L' ->
+
+   (b)	   | FIRST   FOLLOW   NULLABLE | +   id  (   )   ;   $
+	---+---------------------------+-----------------------
+	E  | id      $ ; )        n    |     1
+	E' | +       $ ; )        y    | 2           3   3   3
+	T  | id      + $ ; )      n    |     4
+	T' | (       + $ ; )      y    | 5       6   5   5   5
+	T" | ) id    + $ ; )      n    |     8       7
+        L  | id      )            n    |     9
+	L' | ;       )            y    |             11  10
+
+   (c)	The parse tree is easy to draw, but hard in ASCII, so I leave
+	this as exercise again.

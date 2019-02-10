@@ -1,0 +1,47 @@
+Homework 1 Solutions
+
+
+1. (a)    ((. D+ | D+ . D*)(epsilon | Exp Sign D+)) | D+ Exp Sign D+
+
+   (b) The NFA constructed using Thompson's algorithm is too hard to
+       draw in ASCII.  I leave that as an exercise.  Here's a DFA
+       constructed by hand:
+
+        start state s1;
+        state s2, s4, s5, s6;
+        final state s3, s7;
+
+        <s1> . <s2>;
+        <s1> D <s4>;
+        <s2> D <s3>;
+        <s3> D <s3>;
+        <s3> Exp <s5>;
+        <s4> . <s3>;
+        <s4> D <s4>;
+        <s4> Exp <s5>;
+        <s5> Sign <s6>;
+        <s6> D <s7>;
+        <s7> D <s7>;
+
+    where the syntax <s1>e<s2> means that there is an edge from
+    s1 to s2 with label e.
+
+
+2. (a)    ((C|H|O) (epsilon | D2 | D1D0+))+
+
+   (b)  Here's the automaton,
+
+        start state s1;
+        final state s2, s4;
+        state s3;
+
+        <s1> C|H|O <s2>;
+        <s2> C|H|O <s2>;
+        <s2> 1 <s3>;
+        <s3> D0 <s4>;
+        <s2> D2 <s4>;
+        <s4> C|H|O <s2>;
+        <s4> D0 <s4>;
+
+    where the syntax <s1>e<s2> means that there is an edge from
+    s1 to s2 with label e.
